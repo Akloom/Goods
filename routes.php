@@ -15,6 +15,8 @@ get('/catalog', 'pages/catalog.php');
 
 get('/payment', 'pages/payment.php');
 
+get('/sign-in', 'pages/auth/sign-in.php');
+
 get('/$id', 'pages/index.php');
 
 // get('/user/$id', 'views/user');

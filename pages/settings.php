@@ -7,8 +7,7 @@ $title = "Settings page";
 
 <div class="content">
 <?php include './layout/header.php'; ?>
-
-
+<?php include './include/settings.php'; ?>
 </div>
 
 <?php include './layout/footer.php'; ?>
