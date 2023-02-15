@@ -13,6 +13,8 @@ get('/profile', 'pages/profile.php');
 
 get('/catalog', 'pages/catalog.php');
 
+get('/sign-up', 'pages/auth/sign-up.php');
+
 get('/payment', 'pages/payment.php');
 
 get('/sign-in', 'pages/auth/sign-in.php');
