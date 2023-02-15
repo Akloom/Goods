@@ -1,0 +1,123 @@
+.wrapper {
+  display: block;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.sign {
+  padding: 50px 30px;
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  background: $color-white-50;
+  border: 1px solid #F0F0F6;
+  box-shadow: 0px 5px 40px rgba(33, 33, 33, 0.05);
+  border-radius: 12px;
+
+  &-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    &__logo {
+      width: 32px;
+      height: 32px;
+      fill: $color-indigo-100;
+    }
+
+    span {
+      font-weight: 800;
+      font-size: 21px;
+      line-height: 72%;
+      color: $color-black-800;
+    }
+  }
+
+  &-input {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    &__collapse {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      small {
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 72%;
+        color: $color-black-800;
+      }
+
+      input {
+        width: 400px;
+        padding: 12px;
+        border-radius: 6px;
+        background: $color-white-70;
+        font-weight: 600;
+        color: $color-black-800;
+      }
+    }
+  }
+
+  &-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    &__btn {
+      cursor: pointer;
+      width: 196px;
+      padding: 17px 0;
+      border: 1px solid $color-white-70;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: $color-white-70;
+      font-weight: 800;
+      font-size: 14px;
+      line-height: 72%;
+      color: $color-white-300;
+      transition: .6s all;
+
+      &:hover{
+        transition: .6s all;
+        background: $color-indigo-100;
+        color: $color-white-50;
+      }
+    }
+  }
+}
+
+.active{
+  border: 1px solid $color-indigo-100;
+  background: $color-indigo-100;
+  color: $color-white-50;
+  transition: .6s all;
+
+  &:hover{
+    transition: .6s all;
+    background: $color-white-50;
+    color: $color-indigo-100;
+  }
+}
+
+@media screen and (max-width: 550px){
+  .sign-input__collapse input{
+    width: 200px;
+  }
+
+  .sign-buttons{
+    flex-direction: column;
+  }
+}
