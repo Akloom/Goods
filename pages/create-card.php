@@ -9,6 +9,7 @@ $home = "Новый товар";
 
 <div class="content">
   <?php include './layout/header.php'; ?>
+  <?php include './include/create-card.php'; ?>
 
 </div>
 

@@ -1,44 +1,46 @@
 <header class="header">
-    <div class="header-content">
-      <div class="header-content__name">
-        <h1>Главная</h1>
-        <div class="header-content__name-breadcrump">
-          <?php
-          function breadcrumbs($separator = ' &raquo; ', $home = 'Главная')
-          {
-            $path = array_filter(explode('/', parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH)));
+  <div class="header-content">
+    <div class="header-content__name">
+      <h1>Главная</h1>
+      <div class="header-content__name-breadcrump">
+        <?php
 
-            $base = ($_SERVER['HTTPS'] ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . '/';
+        $_SERVER['HTTPS'] = false;
 
-            $breadcrumbs = array("<a href=\"$base\">$home</a>");
+        function breadcrumbs($separator = ' &raquo; ', $home = 'Главная')
+        {
+          $path = array_filter(explode('/', parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH)));
 
-            $crumbs = '';
+          $base = ($_SERVER['HTTPS'] ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . '/';
 
-            $last = end(array_keys($path));
+          $breadcrumbs = array("<a href=\"$base\">$home</a>");
 
-            foreach ($path as $x => $crumb) {
-              $title = ucwords(str_replace(array('.php', '_', '%20'), array('', ' ', ' '), $crumb));
+          $crumbs = '';
 
-              if ($x != $last) {
-                $breadcrumbs[] = "<a href=\"$base$crumbs$crumb\">$title</a>";
-                $crumbs .= $crumb . '/';
-              } else {
-                $breadcrumbs[] = $title;
-              }
+          $last = end(array_keys($path));
+
+          foreach ($path as $x => $crumb) {
+            $title = ucwords(str_replace(array('.php', '_', '%20'), array('', ' ', ' '), $crumb));
+
+            if ($x != $last) {
+              $breadcrumbs[] = "<a href=\"$base$crumbs$crumb\">$title</a>";
+              $crumbs .= $crumb . '/';
+            } else {
+              $breadcrumbs[] = $title;
             }
-
-            return implode($separator, $breadcrumbs);
           }
 
-          ?>
-          <?php
-          echo breadcrumbs(' / ');
-          ?>
-        </div>
+          return implode($separator, $breadcrumbs);
+        }
+
+        ?>
+
+        <?= breadcrumbs(' / '); ?>
       </div>
-      <a href="">
-        <img src="./assets/img/icons/exit-icon.svg" alt="">
-        <span>Выйти</span>
-      </a>
     </div>
-  </header>
+    <a href="">
+      <img src="./assets/img/icons/exit-icon.svg" alt="">
+      <span>Выйти</span>
+    </a>
+  </div>
+</header>
