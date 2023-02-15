@@ -71,7 +71,7 @@
       </div>
     </div>
 
-    <div class="main-form-create__block gap-2">
+    <div class="main-form-create__block gap-2"> 
       <button class="btn btn-success">Сохранить</button>
       <button class="btn btn-deff">Выгрузить в маркетплейсы</button>
     </div>
