@@ -1,5 +1,5 @@
 <?php
-$title = "Home Page";
+$title = "Новый товар";
 
 $home = "Новый товар";
 ?>

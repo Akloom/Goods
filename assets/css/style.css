@@ -131,7 +131,6 @@
   gap: 20px;
 }
 .header-content a {
-  margin-left: auto;
   padding: 10px 15px;
   border-radius: 6px;
   background: #F7F7FF;
@@ -453,10 +452,10 @@
 }
 
 .main-form {
-  margin: 20px;
+  margin: 40px;
   padding: 30px 24px;
   background: #fff;
-  border-radius: 12px;
+  border-radius: 8px;
 }
 
 .main-form input {
@@ -604,7 +603,6 @@
   font-weight: 800;
   font-size: 16px;
 }
-
 .total-buttons button:last-child {
   color: #A4A4BA;
 }
@@ -627,7 +625,6 @@
   height: 21px;
   display: block;
 }
-
 .checkbox input {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -643,16 +640,13 @@
   transition: box-shadow 0.3s;
   box-shadow: inset 0 0 0 var(--s, 1px) var(--b, var(--border));
 }
-
 .checkbox input:hover {
   --s: 2px;
   --b: var(--border-hover);
 }
-
 .checkbox input:checked {
   --b: var(--border-active);
 }
-
 .checkbox svg {
   pointer-events: none;
   fill: none;
@@ -806,6 +800,27 @@
   gap: 20px;
 }
 
+@media screen and (max-width: 768px) {
+  .main-form-create {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+  .main-form-create__title {
+    width: 85%;
+  }
+  .main-form-create__block {
+    display: flex;
+    padding: 0;
+    flex-direction: column;
+    width: 90%;
+    box-sizing: border-box;
+  }
+  .btn-deff {
+    line-height: 15px;
+    padding: 15px;
+  }
+}
 .payment {
   margin: 40px;
   padding: 30px 24px 90px 24px;
