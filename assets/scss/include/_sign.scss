@@ -1,12 +1,12 @@
-.wrapper {
-  display: block;
-}
-
-.form {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.content {
   min-height: 100vh;
+
+  &-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
 }
 
 .sign {
@@ -90,7 +90,7 @@
       color: $color-white-300;
       transition: .6s all;
 
-      &:hover{
+      &:hover {
         transition: .6s all;
         background: $color-indigo-100;
         color: $color-white-50;
@@ -99,25 +99,25 @@
   }
 }
 
-.active{
+.active {
   border: 1px solid $color-indigo-100;
   background: $color-indigo-100;
   color: $color-white-50;
   transition: .6s all;
 
-  &:hover{
+  &:hover {
     transition: .6s all;
     background: $color-white-50;
     color: $color-indigo-100;
   }
 }
 
-@media screen and (max-width: 550px){
-  .sign-input__collapse input{
+@media screen and (max-width: 550px) {
+  .sign-input__collapse input {
     width: 200px;
   }
 
-  .sign-buttons{
+  .sign-buttons {
     flex-direction: column;
   }
 }

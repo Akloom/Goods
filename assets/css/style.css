@@ -30,7 +30,7 @@
 .wrapper {
   font-family: "Mulish", sans-serif;
   background: #EEEEF5;
-  display: flex;
+  display: flex !important;
   min-height: 100vh;
 }
 
@@ -916,11 +916,10 @@
     font-size: 10px;
   }
 }
-.wrapper {
-  display: block;
+.content {
+  min-height: 100vh;
 }
-
-.form {
+.content-form {
   display: flex;
   align-items: center;
   justify-content: center;
