@@ -17,11 +17,11 @@ $title = "Авторизация";
     </div>
     <div class="sign-input">
       <div class="sign-input__collapse">
-        <small>E-mail</small>
+        <small>Электронная почта</small>
         <input type="email" name="email">
       </div>
       <div class="sign-input__collapse">
-        <small>Password</small>
+        <small>Пароль</small>
         <input type="password" name="password">
       </div>
     </div>
