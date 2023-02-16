@@ -1,5 +1,5 @@
 <?php
-$title = "Catalog Page";
+$title = "Каталог";
 ?>
 <?php include './layout/base.php'; ?>
 

@@ -1,5 +1,5 @@
 <?php
-$title = "Settings page";
+$title = "Настройки";
 ?>
 <?php include './layout/base.php'; ?>
 

@@ -1,5 +1,5 @@
 <?php
-$title = "Profile Page";
+$title = "Профиль";
 ?>
 <?php include './layout/base.php'; ?>
 

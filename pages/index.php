@@ -1,5 +1,5 @@
 <?php
-$title = "Home Page";
+$title = "Главная";
 ?>
 <?php include './layout/base.php'; ?>
 

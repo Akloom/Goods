@@ -1,5 +1,5 @@
 <?php
-$title = "Payment Page";
+$title = "Способы оплаты";
 ?>
 <?php include './layout/base.php'; ?>
 
