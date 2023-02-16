@@ -17,9 +17,9 @@
 
 .wrapper{
   font-family: "Mulish", sans-serif;
-  background: $color-white-100;
   display: flex !important;
-  min-height: 100vh
+  min-height: 100vh;
+  background: $color-white-100;
 }
 
 .content{
@@ -33,3 +33,4 @@
 @import './include/create-card.scss';
 @import './include/payment';
 @import './include/sign';
+@import './include/404';

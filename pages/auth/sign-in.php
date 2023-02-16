@@ -27,7 +27,7 @@ $title = "Авторизация";
         </div>
       </div>
       <div class="sign-buttons">
-        <button type="submit" name="send" class="sign-buttons__btn active">Войти</button>
+        <button type="submit" name="auth" class="sign-buttons__btn active">Войти</button>
         <a href="/sign-up" name="redirect-up" class="sign-buttons__btn">Регистрация</a>
       </div>
     </form>

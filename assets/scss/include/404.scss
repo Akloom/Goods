@@ -1,0 +1,44 @@
+.error {
+  font-family: "Mulish", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+
+  svg {
+    fill: $color-indigo-50;
+    width: 100px;
+    height: 100px;
+  }
+
+  img {
+    margin-left: 22px;
+    max-width: 600px;
+    width: 100%;
+  }
+
+  span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 22px;
+    color: $color-white-300;
+
+    a {
+      text-decoration: underline;
+      color: $color-indigo-100;
+    }
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .error {
+    span {
+      flex-direction: column;
+      font-size: 18px;
+    }
+  }
+}

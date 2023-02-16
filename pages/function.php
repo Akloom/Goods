@@ -1,5 +1,3 @@
 <?php
-  include "./pages/config.php";
-  global $connect;
-
-?>
+include "./pages/config.php";
+global $connect;
