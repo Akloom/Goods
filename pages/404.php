@@ -1,5 +1,6 @@
 <?php
-include "./pages/function.php";
+  require_once "./include/config.php";
+  require_once "./include/function.php";
 ?>
 
 <?php
