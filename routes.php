@@ -13,7 +13,4 @@ get('/payment', 'pages/payment.php');
 get('/sign-up', 'pages/auth/sign-up.php');
 get('/sign-in', 'pages/auth/sign-in.php');
 
-post('/sign-in', 'pages/sign-in.php');
-post('/sign-up', 'pages/sign-up.php');
-
 any('/404','pages/404.php');

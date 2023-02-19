@@ -2,55 +2,6 @@
 $title = "Регистрация";
 ?>
 
-<?php
-  require_once "./include/config.php";
-  require_once "./include/function.php";
-
-  if(isset($_SESSION['is_auth'])){
-    redirect_to('/');
-  }
-
-$data = $_POST;
-
-if(isset($data['register'])){
-
-  $username = clear_field($data['username']);
-  $email = clear_field($data['email']);
-  $password = clear_field($data['password']);
-  $hash_password = password_hash($password, PASSWORD_DEFAULT);
-  $confirm = clear_field($data['confirm']);
-
-  $errMsg = [];
-  if(empty($username)){
-    $errMsg[] = "Поле не должно быть пустым";
-  }
-  if(empty($email)){
-    $errMsg[] = "E-Mail не должен быть пустым";
-  }
-  if(empty($password)){
-    $errMsg[] = "Пароль не должен быть пустым";
-  }
-  if(empty($confirm)){
-    $errMsg[] = "Поле не должно быть пустым";
-  }
-  if($password !== $confirm){
-    $errMsg[] = "Пароли не совпадают";
-  }
-
-  if(!$errMsg){
-  
-    $requery = "INSERT INTO `users` (`username`, `email`, `password`) VALUES ('$username', '$email', '$hash_password')";
-    $result = mysqli_query($connect, $requery);
-  
-    if (!$result) {
-      echo "Error";
-    } else {
-      redirect_to('/sign-in');
-    }
-  }
-}
-?>
-
 <?php include './layout/base.php'; ?>
 
 <div class="content">
@@ -66,22 +17,18 @@ if(isset($data['register'])){
       <div class="sign-input">
         <div class="sign-input__collapse">
           <small>ФИО</small>
-          <small class="errMsg"><?= $errMsg[0]; ?></small>
           <input type="text" name="username">
         </div>
         <div class="sign-input__collapse">
           <small>E-Mail</small>
-          <small class="errMsg"><?= $errMsg[1]; ?></small>
           <input type="email" name="email">
         </div>
         <div class="sign-input__collapse">
           <small>Пароль</small>
-          <small class="errMsg"><?= $errMsg[2]; ?></small>
           <input type="password" name="password">
         </div>
         <div class="sign-input__collapse">
           <small>Повторить пароль</small>
-          <small class="errMsg"><?= $errMsg[3]; ?></small>
           <input type="password" name="confirm">
         </div>
       </div>

@@ -2,12 +2,12 @@
 $title = "Главная";
 ?>
 
-<?php
+<!-- <?php
   require_once "./include/function.php";
   if (!isset($_SESSION['is_auth'])) {
     redirect_to('/sign-in');
   }
-?>
+?> -->
 
 <?php include './layout/base.php'; ?>
 
